@@ -18,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className=" text-black min-h-screen flex flex-col">
+      <body className="bg-slate-100 text-black min-h-screen flex flex-col">
         {children}
         <footer className="mt-auto py-4 text-center text-sm">
-          This portfolio is coded by Boss Hudsawat, using NextJS and TailwindCSS
+          This portfolio is coded by Boss Hudsawat, using Next.js and TailwindCSS
         </footer>
       </body>
     </html>
