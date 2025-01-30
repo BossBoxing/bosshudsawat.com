@@ -1,0 +1,57 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - 'main' # Trigger this workflow on pushes to the 'develop' branch
+  release:
+    types:
+      - published # Trigger this workflow on published releases
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # Allows read access to repository contents
+      packages: write # Allows pushing Docker images
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }} # Automatically uses the actor triggering the workflow
+          password: ${{ secrets.GITHUB_TOKEN }} # Secure access token
+
+      - name: Build and Push Docker Image
+        run: |
+          # Create or reset .env file
+          rm -f .env
+          touch .env
+          echo '${{ vars.ENV_PRD }}' >> .env
+
+          # Build and push Docker image
+          docker build . \
+            --file Dockerfile \
+            --tag ghcr.io/bossboxing/bosshudsawat-com:latest
+          docker push ghcr.io/bossboxing/bosshudsawat-com:latest
+
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }} # Server IP or hostname
+          username: 'root' # Server username
+          password: ${{ secrets.PASSWORD }} # Server password
+          port: 22 # SSH port
+          script: |
+            # Navigate to workspace directory
+            cd /root/workspace
+
+            # Update and restart Docker services
+            docker compose pull bosshudsawat-com
+            docker compose up -d bosshudsawat-com
+
+            # Clean up unused Docker images
+            docker image prune -af
