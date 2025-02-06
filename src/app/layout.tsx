@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Portfolio website of Boss Hudsawat",
   icons: {
     icon: "/fav/favicon.ico", // Default favicon
-    shortcut: "/fav/android-chrome-192x192.png", // Shortcut icon
+    // shortcut: "/fav/android-chrome-192x192.png", // Shortcut icon
   },
 }
 
