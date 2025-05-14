@@ -9,18 +9,46 @@ export default function Content() {
             <div className="grid grid-cols-1 xl:grid-cols-2">
                 <div className="">
                     <Card className="mb-6 shadow-md">
-                        {/* <CardHeader>
-                        <CardTitle></CardTitle>
-                        </CardHeader> */}
                         <CardContent>
-                            <ul className="mt-6 list-disc pl-5">
-                                {/* <li>💁‍♂️View my resume: <Link href="/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Click here</Link></li> */}
+                            <ul className="mt-6 list-disc pl-5 space-y-2">
                                 <li>💁‍♂️View my resume: Coming soon..</li>
                                 <li>🗺Nationality: Thai</li>
                                 <li>🏠Live in Khon Kaen, Thailand</li>
                                 <li>🏳️Languages: Thai - English</li>
-                                <li>📧Email: <Link href="mailto:contact@bosshudsawat.com" target="_blank" rel="noopener noreferrer" className="text-blue-500">contact@bosshudsawat.com</Link></li>
-                                <li>💭Hobbies: 🎮Video Game, 🏸Badminton, 🥁Drums, 🎸Guitar, 🎸Bass, 🎤Singing</li>
+                                <li>
+                                    📧Email:{" "}
+                                    <Link
+                                        href="mailto:contact@bosshudsawat.com"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="text-blue-500"
+                                    >
+                                        contact@bosshudsawat.com
+                                    </Link>
+                                </li>
+                                <li>
+                                    💭Hobbies: 🎮Video Game, 🏸Badminton, 🥁Drums, 🎸Guitar, 🎸Bass, 🎤Singing
+                                </li>
+                                <li>
+                                    🎞️Videos:
+                                    <ul className="mt-2 list-disc pl-5 space-y-2">
+                                        <li>
+                                            🎓 Provide educational guidance to high school (Thai)
+                                            <div className="mt-2">
+                                                <iframe
+                                                    width="600"
+                                                    height="315"
+                                                    src="https://www.youtube.com/embed/xs4PMjC70GM?si=0QtQ1bxtrAj5EVte"
+                                                    title="YouTube video player"
+                                                    frameBorder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    referrerPolicy="strict-origin-when-cross-origin"
+                                                    allowFullScreen
+                                                ></iframe>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                         </CardContent>
                     </Card>
@@ -32,7 +60,7 @@ export default function Content() {
                         <CardContent>
                             <ul className="list-disc pl-5">
                                 <li>
-                                <strong>Programming Language</strong>
+                                    <strong>Programming Language</strong>
                                     <ul className="mt-1 list-[circle] pl-6 space-y-1 text-gray-700">
                                         <li>C,C++ for Arduino/Robotics/Fundamental-Programming</li>
                                         <li>Typescript/Javascript</li>
@@ -91,13 +119,13 @@ export default function Content() {
                                     <div className="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                                     <time className="mb-1 text-sm font-normal leading-none text-black dark:text-gray-500">August 2023 - Present</time>
                                     <img src="https://thaidatacloud-www.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2024/05/21122516/TDC_main_logo.svg"
-                                    alt="THAI DATA CLOUD Logo"
-                                    width={200}
-                                    height={200}
-                                    className="justify-left mb-4 m-2"></img>
+                                        alt="THAI DATA CLOUD Logo"
+                                        width={200}
+                                        height={200}
+                                        className="justify-left mb-4 m-2"></img>
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Full Stack Developer at <Link href="https://thaidata.cloud/" target="_blank" rel="noopener noreferrer" className="text-blue-500">THAI DATA CLOUD </Link></h3>
                                     <p className="text-sm font-normal text-gray-600 dark:text-gray-400">THAI DATA CLOUD is a leading provider of high-performance cloud servers and comprehensive cloud solutions, offering scalable, secure, and cost-effective services tailored to businesses' specific needs, with a focus on driving digital transformation and innovation in Thailand</p>
-                                    
+
                                     {/* <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
                                     <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn more <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -105,13 +133,13 @@ export default function Content() {
                                 </li>
                                 <li className="mb-10 ms-4 space-y-1">
                                     <img src="https://mlvrv2qgedqb.i.optimole.com/w:auto/h:auto/q:mauto/ig:avif/https://behinder.ai/wp-content/uploads/2024/07/website-logo.png"
-                                    alt="Behinder-AI Logo"
-                                    width={200}
-                                    height={200}
-                                    className="justify-left mb-4 m-2"></img>
+                                        alt="Behinder-AI Logo"
+                                        width={200}
+                                        height={200}
+                                        className="justify-left mb-4 m-2"></img>
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Full Stack Developer (Parallel Side Project) at <Link href="https://behinder.ai/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Behinder AI </Link></h3>
                                     <p className="text-sm font-normal text-gray-600 dark:text-gray-400">Behinder AI is an AI-powered content creation platform that streamlines the process of generating high-quality content for businesses and individuals. It offers tools for various content types, including blogs, marketing materials, business documents, and creative writing, aiming to enhance efficiency and output quality.</p>
-                                    
+
                                     {/* <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.</p>
                                     <a href="#" className="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Learn more <svg className="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -120,11 +148,11 @@ export default function Content() {
                                 <li className="mb-10 ms-4">
                                     <div className="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                                     <time className="mb-1 text-sm font-normal leading-none text-black dark:text-gray-500">August 2022 - August 2023</time>
-                                    <img src="https://import.cdn.thinkific.com/285345%2Fcustom_site_themes%2Fid%2Ftai5f14XSg684APMo4ZJ_Untitled-112.png"
-                                     alt="THAI DATA CLOUD main logo"
-                                     width={200}
-                                     height={200}
-                                     className="justify-left mb-2 bg-black m-2 p-2 rounded-md"></img>
+                                    <img src="\img\friendrobot-logo.png"
+                                        alt="Friend Robot logo"
+                                        width={200}
+                                        height={200}
+                                        className="justify-left mb-2 bg-black m-1 p-1 rounded-md"></img>
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Software Engineer at <Link href="https://www.friendrobot.co/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Friend Robot </Link></h3>
                                     <p className="text-sm font-normal text-gray-600 dark:text-gray-400">Friend Robot is an educational platform that provides online courses and resources to make robotics accessible to everyone. They offer various products and services, including microcontroller boards, sensors, and online courses, to support learning in robotics.</p>
                                 </li>

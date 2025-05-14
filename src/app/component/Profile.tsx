@@ -10,6 +10,8 @@ import {
 } from "@/components/ui/carousel"
 
 export default function Profile() {
+    // const { t } = useTranslation('content');
+
     return (
         <aside className="lg:w-1/4 p-6 ">
             <div className="sticky top-6">
@@ -20,6 +22,7 @@ export default function Profile() {
                     height={200}
                     className="rounded-full mx-auto mb-4"
                 />
+                {/* <span> {t('about-me')}</span> */}
                 <h2 className="text-xl font-bold text-center">Hello! I'm</h2>
                 <h1 className="text-2xl font-bold text-center mb-2">Boss Hudsawat Akkati</h1>
                 <p className="text-center mb-2">Full Stack Developer at <Link href="https://thaidata.cloud/" target="_blank" rel="noopener noreferrer" className="text-blue-500">THAI DATA CLOUD </Link> </p>
