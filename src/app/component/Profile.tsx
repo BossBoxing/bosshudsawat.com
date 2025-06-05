@@ -1,43 +1,73 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import Image from "next/image"
-import Link from "next/link"
+"use client";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel"
+} from "@/components/ui/carousel";
 
 export default function Profile() {
     // const { t } = useTranslation('content');
 
-    return (
-        <aside className="lg:w-1/4 p-6 ">
-            <div className="sticky top-6">
-                <Image
-                    src="/img/bosshudsawat-on-stage.jpg"
-                    alt="Boss Hudsawat Akkati"
-                    width={200}
-                    height={200}
-                    className="rounded-full mx-auto mb-4"
-                />
-                {/* <span> {t('about-me')}</span> */}
-                <h2 className="text-xl font-bold text-center">Hello! I'm</h2>
-                <h1 className="text-2xl font-bold text-center mb-2">Boss Hudsawat Akkati</h1>
-                <p className="text-center mb-2">Full Stack Developer at <Link href="https://thaidata.cloud/" target="_blank" rel="noopener noreferrer" className="text-blue-500">THAI DATA CLOUD </Link> </p>
-                <p className="text-center text-sm">Graduated from <Link href="https://kku.ac.th/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Khon Kaen University </Link></p>
+    // Animation variants
+    const container = {
+        hidden: {},
+        show: {
+            transition: {
+                staggerChildren: 0.15,
+            },
+        },
+    };
+    const item = {
+        hidden: { opacity: 0, y: 32 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+    };
 
-                <div className="mt-6 -mb-6 place-self-center">
+    return (
+        <motion.div
+            className="lg:w-1/4 p-6"
+            role="complementary"
+            variants={container}
+            initial="hidden"
+            animate="show"
+        >
+            <div className="sticky top-6">
+                <motion.div variants={item}>
+                    <Image
+                        src="/img/bosshudsawat-on-stage.jpg"
+                        alt="Boss Hudsawat Akkati"
+                        width={200}
+                        height={200}
+                        className="rounded-full mx-auto mb-4"
+                    />
+                </motion.div>
+                {/* <span> {t('about-me')}</span> */}
+                <motion.h2 className="text-xl font-bold text-center" variants={item}>Hello! I'm</motion.h2>
+                <motion.h1 className="text-2xl font-bold text-center mb-2" variants={item}>Boss Hudsawat Akkati</motion.h1>
+                <motion.p className="text-center mb-2" variants={item}>
+                    Full Stack Developer at <Link href="https://thaidata.cloud/" target="_blank" rel="noopener noreferrer" className="text-blue-500">THAI DATA CLOUD </Link>
+                </motion.p>
+                <motion.p className="text-center text-sm" variants={item}>
+                    Graduated from <Link href="https://kku.ac.th/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Khon Kaen University </Link>
+                </motion.p>
+
+                <motion.div className="mt-6 -mb-6 place-self-center" variants={item}>
                     <a href="https://git.io/typing-svg">
                         <img src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&weight=600&size=24&duration=4000&pause=1000&color=4E99F7&center=true&width=435&lines=Hello+Everyone.;I'm+Hudsawat.;He%2FHim;Computer+Science." alt="Typing SVG" />
                     </a>
-                </div>
-                <Card className="mb-6 mt-6 shadow-md">
-                    <CardHeader>
-                        <p className="text-gray-500">I am passionate about Full Stack Development, DevOps, AI , Robotics, Game Development, Scripting (RedM, FiveM) and all other things about computer.</p>
-                    </CardHeader>
-                </Card>
+                </motion.div>
+                <motion.div variants={item}>
+                    <Card className="mb-6 mt-6 shadow-md">
+                        <CardHeader>
+                            <p className="text-gray-500">I am passionate about Full Stack Development, DevOps, AI , Robotics, Game Development, Scripting (RedM, FiveM) and all other things about computer.</p>
+                        </CardHeader>
+                    </Card>
+                </motion.div>
 
                 <div className="mt-7 justify-self-center">
                     <a href="https://github.com/bossboxing" target="_blank" rel="noreferrer">
@@ -90,7 +120,7 @@ export default function Profile() {
                     </Carousel>
                 </div> */}
             </div>
-        </aside>
+        </motion.div>
     )
 }
 

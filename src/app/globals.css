@@ -64,6 +64,11 @@
   }
 }
 
+@font-face {
+  font-family: 'SukhumvitSet-Text';
+  src: url('/font/SukhumvitSet-Text.ttf');
+}
+
 .prose ul {
   list-style-type: disc;
   padding-left: 1.5rem;
@@ -74,6 +79,9 @@
   padding-left: 1.5rem;
 }
 
+body, html {
+  font-family: 'SukhumvitSet-Text', sans-serif;
+}
 
 @layer base {
   * {

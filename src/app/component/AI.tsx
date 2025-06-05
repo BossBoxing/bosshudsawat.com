@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { X } from "lucide-react"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { motion, AnimatePresence } from "framer-motion"
 
 type Message = {
     sender: "Boss" | "You"
@@ -127,84 +128,111 @@ export default function ModernAIChat() {
     if (!isOpen) return null
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-            <Card className="w-full max-w-md h-[600px] mx-auto shadow-lg rounded-lg bg-slate-100 flex flex-col">
-                <CardHeader className="flex flex-row justify-between items-center border-b p-4">
-                    <div className="flex items-center space-x-3">
-                        <Avatar>
-                            <AvatarImage src="/img/bosshudsawat-on-stage.jpg?height=40&width=40" alt="Boss" />
-                            <AvatarFallback>BA</AvatarFallback>
-                        </Avatar>
-                        <div>
-                            <h2 className="text-lg font-semibold">Boss Hudsawat Akkati</h2>
-                            <p className="text-sm text-gray-500">Full Stack Developer @ THAI DATA CLOUD</p>
-                        </div>
-                    </div>
-                    <Button
-                        variant="ghost"
-                        size="icon"
-                        onClick={() => setIsOpen(false)}
-                        className="text-gray-500 hover:text-gray-700"
-                    >
-                        <X size={20} />
-                    </Button>
-                </CardHeader>
-                <CardContent className="flex-grow overflow-y-auto p-4 space-y-4">
-                    {messages.map((msg, index) => (
-                        <div key={index} className={`flex ${msg.sender === "Boss" ? "justify-start" : "justify-end"}`}>
-                            <div
-                                className={`max-w-[80%] p-3 rounded-lg ${msg.sender === "Boss" ? "bg-gray-300 text-gray-800" : "bg-blue-500 text-white"
-                                    }`}
-                            >
-                                {msg.sender === "Boss" && typing && index === messages.length - 1 ? currentText : msg.text}
+        <AnimatePresence>
+            <motion.div
+                className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+            >
+                <motion.div
+                    initial={{ scale: 0.9, opacity: 0, y: 60 }}
+                    animate={{ scale: 1, opacity: 1, y: 0 }}
+                    exit={{ scale: 0.9, opacity: 0, y: 60 }}
+                    transition={{ type: "spring", duration: 0.5 }}
+                    className="w-full max-w-md h-[600px] mx-auto shadow-lg rounded-lg bg-slate-100 flex flex-col"
+                >
+                    <CardHeader className="flex flex-row justify-between items-center border-b p-4">
+                        <div className="flex items-center space-x-3">
+                            <Avatar>
+                                <AvatarImage src="/img/bosshudsawat-on-stage.jpg?height=40&width=40" alt="Boss" />
+                                <AvatarFallback>BA</AvatarFallback>
+                            </Avatar>
+                            <div>
+                                <h2 className="text-lg font-semibold">Boss Hudsawat Akkati</h2>
+                                <p className="text-sm text-gray-500">Full Stack Developer @ THAI DATA CLOUD</p>
                             </div>
                         </div>
-                    ))}
-                    {typing && (
-                        <div className="flex justify-start">
-                            <div className="bg-gray-100 p-3 rounded-lg">
-                                <div className="flex space-x-1">
-                                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
-                                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-100"></div>
-                                    <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-200"></div>
-                                </div>
-                            </div>
-                        </div>
-                    )}
-                    <div ref={messagesEndRef} />
-                    {!typing && messages[messages.length - 1].options && messages[messages.length - 1].options!.length > 0 && (
-                        <div className="grid grid-cols-1 justify-items-end gap-2 w-full">
-                            {messages[messages.length - 1].options!.map((option, i) => (
-                                <Button
-                                    key={i}
-                                    onClick={() => handleOptionClick(option)}
-                                    className="w-auto justify-end text-end rounded-lg bg-slate-800 hover:bg-slate-700"
-                                // variant="outline"
+                        <Button
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => setIsOpen(false)}
+                            className="text-gray-500 hover:text-gray-700"
+                        >
+                            <X size={20} />
+                        </Button>
+                    </CardHeader>
+                    <CardContent className="flex-grow overflow-y-auto p-4 space-y-4">
+                        <AnimatePresence initial={false}>
+                            {messages.map((msg, index) => (
+                                <motion.div
+                                    key={index}
+                                    className={`flex ${msg.sender === "Boss" ? "justify-start" : "justify-end"}`}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: 20 }}
+                                    transition={{ duration: 0.35, delay: index * 0.06 }}
                                 >
-                                    {option}
-                                </Button>
+                                    <div
+                                        className={`max-w-[80%] p-3 rounded-lg ${msg.sender === "Boss" ? "bg-gray-300 text-gray-800" : "bg-blue-500 text-white"
+                                            }`}
+                                    >
+                                        {msg.sender === "Boss" && typing && index === messages.length - 1 ? currentText : msg.text}
+                                    </div>
+                                </motion.div>
                             ))}
-                        </div>
-                    )}
-                </CardContent>
-                {/* <CardFooter className="border-t p-4">
-            {!typing && messages[messages.length - 1].options && messages[messages.length - 1].options!.length > 0 && (
-              <div className="grid grid-cols-1 justify-items-end gap-2 w-full">
-                {messages[messages.length - 1].options!.map((option, i) => (
-                  <Button
-                    key={i}
-                    onClick={() => handleOptionClick(option)}
-                    className="w-auto justify-end text-end rounded-lg bg-slate-800 hover:bg-slate-700"
-                    // variant="outline"
-                  >
-                    {option}
-                  </Button>
-                ))}
-              </div>
-            )}
-          </CardFooter> */}
-            </Card>
-        </div>
+                        </AnimatePresence>
+                        {typing && (
+                            <motion.div
+                                className="flex justify-start"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 10 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                <div className="bg-gray-100 p-3 rounded-lg">
+                                    <div className="flex space-x-1">
+                                        <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
+                                        <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-100"></div>
+                                        <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-200"></div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        )}
+                        <div ref={messagesEndRef} />
+                        {!typing && messages[messages.length - 1].options && messages[messages.length - 1].options!.length > 0 && (
+                            <motion.div
+                                className="grid grid-cols-1 justify-items-end gap-2 w-full"
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 10 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                {messages[messages.length - 1].options!.map((option, i) => (
+                                    <motion.div
+                                        key={i}
+                                        initial={{ opacity: 0, x: 20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        exit={{ opacity: 0, x: 20 }}
+                                        transition={{ duration: 0.2, delay: i * 0.08 }}
+                                    >
+                                        <Button
+                                            onClick={() => handleOptionClick(option)}
+                                            className="w-auto justify-end text-end rounded-lg bg-slate-800 hover:bg-slate-700"
+                                        >
+                                            {option}
+                                        </Button>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+                        )}
+                    </CardContent>
+                    {/* <CardFooter className="border-t p-4">
+                ...
+                    </CardFooter> */}
+                </motion.div>
+            </motion.div>
+        </AnimatePresence>
     )
 }
 
