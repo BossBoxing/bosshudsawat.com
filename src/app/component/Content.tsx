@@ -48,7 +48,7 @@ export default function Content() {
             initial="hidden"
             animate="visible"
         >
-            <h2 className="pb-2 pl-2 text-2xl font-bold mb-2">About Me</h2>
+
             <div className="grid grid-cols-1 xl:grid-cols-2">
                 <div>
                     <motion.div
@@ -58,8 +58,11 @@ export default function Content() {
                         animate="visible"
                     >
                         <Card className="mb-6 shadow-md">
+                            <CardHeader>
+                                <CardTitle className="font-bold text-xl">About Me</CardTitle>
+                            </CardHeader>
                             <CardContent>
-                                <ul className="mt-6 list-disc pl-5 space-y-2">
+                                <ul className="list-disc pl-5 space-y-2">
                                     {aboutMeItems.map((item, i) => (
                                         <motion.li
                                             key={i}
@@ -150,9 +153,9 @@ export default function Content() {
                                 <CardTitle className="font-bold text-xl">My Experience</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <ol className="relative border-s border-black dark:border-gray-700">
+                                <ol className="relative z-0 border-s border-black dark:border-gray-700">
                                     <li className="mb-5 ms-4 space-y-1">
-                                        <div className="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                        <div className="absolute z-10 w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                                         <time className="mb-1 text-sm font-normal leading-none text-black dark:text-gray-500">August 2023 - Present</time>
                                         <img src="https://thaidatacloud-www.s3.ap-southeast-1.amazonaws.com/wp-content/uploads/2024/05/21122516/TDC_main_logo.svg"
                                             alt="THAI DATA CLOUD Logo"
@@ -182,7 +185,7 @@ export default function Content() {
                                         </svg></a> */}
                                     </li>
                                     <li className="mb-10 ms-4">
-                                        <div className="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                        <div className="absolute z-10 w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                                         <time className="mb-1 text-sm font-normal leading-none text-black dark:text-gray-500">August 2022 - August 2023</time>
                                         <img src="\img\friendrobot-logo.png"
                                             alt="Friend Robot logo"
@@ -193,7 +196,7 @@ export default function Content() {
                                         <p className="text-sm font-normal text-gray-600 dark:text-gray-400">Friend Robot is an educational platform that provides online courses and resources to make robotics accessible to everyone. They offer various products and services, including microcontroller boards, sensors, and online courses, to support learning in robotics.</p>
                                     </li>
                                     <li className="ms-4">
-                                        <div className="absolute w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                                        <div className="absolute z-10 w-3 h-3 bg-black rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                                         <time className="mb-1 text-sm font-normal leading-none text-black dark:text-gray-500">May 2022 - August 2022</time>
                                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Web Programmer Trainee at Khon kaen Softtech co.,ltd.</h3>
                                         {/* <p className="text-sm font-normal text-gray-600 dark:text-gray-400">Khon kaen Softtech is a web development solutions</p> */}

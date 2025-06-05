@@ -125,114 +125,125 @@ export default function ModernAIChat() {
         }, 50)
     }
 
-    if (!isOpen) return null
-
     return (
-        <AnimatePresence>
-            <motion.div
-                className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-            >
-                <motion.div
-                    initial={{ scale: 0.9, opacity: 0, y: 60 }}
-                    animate={{ scale: 1, opacity: 1, y: 0 }}
-                    exit={{ scale: 0.9, opacity: 0, y: 60 }}
-                    transition={{ type: "spring", duration: 0.5 }}
-                    className="w-full max-w-md h-[600px] mx-auto shadow-lg rounded-lg bg-slate-100 flex flex-col"
-                >
-                    <CardHeader className="flex flex-row justify-between items-center border-b p-4">
-                        <div className="flex items-center space-x-3">
-                            <Avatar>
-                                <AvatarImage src="/img/bosshudsawat-on-stage.jpg?height=40&width=40" alt="Boss" />
-                                <AvatarFallback>BA</AvatarFallback>
-                            </Avatar>
-                            <div>
-                                <h2 className="text-lg font-semibold">Boss Hudsawat Akkati</h2>
-                                <p className="text-sm text-gray-500">Full Stack Developer @ THAI DATA CLOUD</p>
-                            </div>
-                        </div>
-                        <Button
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => setIsOpen(false)}
-                            className="text-gray-500 hover:text-gray-700"
+        <>
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 60 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 60 }}
+                            transition={{ type: "spring", duration: 0.5 }}
+                            className="w-full max-w-md h-[600px] mx-auto shadow-lg rounded-lg bg-slate-100 flex flex-col"
                         >
-                            <X size={20} />
-                        </Button>
-                    </CardHeader>
-                    <CardContent className="flex-grow overflow-y-auto p-4 space-y-4">
-                        <AnimatePresence initial={false}>
-                            {messages.map((msg, index) => (
-                                <motion.div
-                                    key={index}
-                                    className={`flex ${msg.sender === "Boss" ? "justify-start" : "justify-end"}`}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: 20 }}
-                                    transition={{ duration: 0.35, delay: index * 0.06 }}
-                                >
-                                    <div
-                                        className={`max-w-[80%] p-3 rounded-lg ${msg.sender === "Boss" ? "bg-gray-300 text-gray-800" : "bg-blue-500 text-white"
-                                            }`}
-                                    >
-                                        {msg.sender === "Boss" && typing && index === messages.length - 1 ? currentText : msg.text}
-                                    </div>
-                                </motion.div>
-                            ))}
-                        </AnimatePresence>
-                        {typing && (
-                            <motion.div
-                                className="flex justify-start"
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 10 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                <div className="bg-gray-100 p-3 rounded-lg">
-                                    <div className="flex space-x-1">
-                                        <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
-                                        <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-100"></div>
-                                        <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-200"></div>
+                            <CardHeader className="flex flex-row justify-between items-center border-b p-4">
+                                <div className="flex items-center space-x-3">
+                                    <Avatar>
+                                        <AvatarImage src="/img/bosshudsawat-on-stage.jpg?height=40&width=40" alt="Boss" />
+                                        <AvatarFallback>BA</AvatarFallback>
+                                    </Avatar>
+                                    <div>
+                                        <h2 className="text-lg font-semibold">Boss Hudsawat Akkati</h2>
+                                        <p className="text-sm text-gray-500">Full Stack Developer @ THAI DATA CLOUD</p>
                                     </div>
                                 </div>
-                            </motion.div>
-                        )}
-                        <div ref={messagesEndRef} />
-                        {!typing && messages[messages.length - 1].options && messages[messages.length - 1].options!.length > 0 && (
-                            <motion.div
-                                className="grid grid-cols-1 justify-items-end gap-2 w-full"
-                                initial={{ opacity: 0, y: 10 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                exit={{ opacity: 0, y: 10 }}
-                                transition={{ duration: 0.3 }}
-                            >
-                                {messages[messages.length - 1].options!.map((option, i) => (
-                                    <motion.div
-                                        key={i}
-                                        initial={{ opacity: 0, x: 20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: 20 }}
-                                        transition={{ duration: 0.2, delay: i * 0.08 }}
-                                    >
-                                        <Button
-                                            onClick={() => handleOptionClick(option)}
-                                            className="w-auto justify-end text-end rounded-lg bg-slate-800 hover:bg-slate-700"
+                                <Button
+                                    variant="ghost"
+                                    size="icon"
+                                    onClick={() => setIsOpen(false)}
+                                    className="text-gray-500 hover:text-gray-700"
+                                >
+                                    <X size={20} />
+                                </Button>
+                            </CardHeader>
+                            <CardContent className="flex-grow overflow-y-auto p-4 space-y-4">
+                                <AnimatePresence initial={false}>
+                                    {messages.map((msg, index) => (
+                                        <motion.div
+                                            key={index}
+                                            className={`flex ${msg.sender === "Boss" ? "justify-start" : "justify-end"}`}
+                                            initial={{ opacity: 0, y: 20 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, y: 20 }}
+                                            transition={{ duration: 0.35, delay: index * 0.06 }}
                                         >
-                                            {option}
-                                        </Button>
+                                            <div
+                                                className={`max-w-[80%] p-3 rounded-lg ${msg.sender === "Boss" ? "bg-gray-300 text-gray-800" : "bg-blue-500 text-white"
+                                                    }`}
+                                            >
+                                                {msg.sender === "Boss" && typing && index === messages.length - 1 ? currentText : msg.text}
+                                            </div>
+                                        </motion.div>
+                                    ))}
+                                </AnimatePresence>
+                                {typing && (
+                                    <motion.div
+                                        className="flex justify-start"
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 10 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <div className="bg-gray-100 p-3 rounded-lg">
+                                            <div className="flex space-x-1">
+                                                <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce"></div>
+                                                <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-100"></div>
+                                                <div className="w-2 h-2 bg-gray-500 rounded-full animate-bounce delay-200"></div>
+                                            </div>
+                                        </div>
                                     </motion.div>
-                                ))}
-                            </motion.div>
-                        )}
-                    </CardContent>
-                    {/* <CardFooter className="border-t p-4">
-                ...
-                    </CardFooter> */}
-                </motion.div>
-            </motion.div>
-        </AnimatePresence>
-    )
+                                )}
+                                <div ref={messagesEndRef} />
+                                {!typing && messages[messages.length - 1].options && messages[messages.length - 1].options!.length > 0 && (
+                                    <motion.div
+                                        className="grid grid-cols-1 justify-items-end gap-2 w-full"
+                                        initial={{ opacity: 0, y: 10 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0, y: 10 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        {messages[messages.length - 1].options!.map((option, i) => (
+                                            <motion.div
+                                                key={i}
+                                                initial={{ opacity: 0, x: 20 }}
+                                                animate={{ opacity: 1, x: 0 }}
+                                                exit={{ opacity: 0, x: 20 }}
+                                                transition={{ duration: 0.2, delay: i * 0.08 }}
+                                            >
+                                                <Button
+                                                    onClick={() => handleOptionClick(option)}
+                                                    className="w-auto justify-end text-end rounded-lg bg-slate-800 hover:bg-slate-700"
+                                                >
+                                                    {option}
+                                                </Button>
+                                            </motion.div>
+                                        ))}
+                                    </motion.div>
+                                )}
+                            </CardContent>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            {/* Floating Chat Button */}
+            {!isOpen && (
+                <button
+                    className="fixed bottom-6 right-6 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-16 h-16 flex items-center justify-center shadow-lg transition-all duration-200 focus:outline-none"
+                    onClick={() => setIsOpen(true)}
+                    aria-label="Open chat"
+                >
+                    {/* Chat bubble icon */}
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.77 9.77 0 01-4-.8l-4.28 1.07a1 1 0 01-1.22-1.22l1.07-4.28A8.96 8.96 0 013 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                </button>
+            )}
+        </>
+    );
 }
-
