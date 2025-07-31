@@ -1,0 +1,140 @@
+export interface Achievement {
+    id: string;
+    year: string;
+    title: string;
+    description: string;
+    images?: Array<{
+        url: string;
+        alt: string;
+        caption?: string;
+    }>;
+    tags: Array<{
+        text: string;
+        bgColor: string;
+        textColor: string;
+    }>;
+    borderColor: string;
+    dotColor: string;
+    timeColor: string;
+}
+
+export const achievementsData: Achievement[] = [
+    {
+        id: "thailand-representative",
+        year: "2016",
+        title: "Representative of Thailand",
+        description: "Selected as a national representative to compete in World Robot Games Firefighting Robot Competition in Bandung, Indonesia, in collaboration with the Office of the Basic Education Commission (OBEC), Thailand. Received Performance Award for outstanding technical performance and innovative robotics solutions.",
+        images: [
+            {
+                url: "/img/robotics-competition/bandung/bandung-1.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 1",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-2.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 2",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-3.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 3",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-4.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 4",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-5.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 5",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-6.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 6",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-7.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 7",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-8.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 8",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-9.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 9",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-10.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 10",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            }
+        ],
+        tags: [
+            {
+                text: "Robotics Competition",
+                bgColor: "bg-green-100",
+                textColor: "text-green-800"
+            },
+            {
+                text: "International Competition",
+                bgColor: "bg-blue-100",
+                textColor: "text-blue-800"
+            }
+        ],
+        borderColor: "border-blue-500",
+        dotColor: "bg-blue-500",
+        timeColor: "text-blue-600"
+    },
+    // {
+    //     id: "performance-award",
+    //     year: "2016",
+    //     title: "Performance Award",
+    //     description: "Received Performance Award at World Robot Games Firefighting Robot Competition in Bandung, Indonesia for outstanding technical performance and innovative robotics solutions.",
+    //     images: [
+    //         // Add images here if you have any photos of the award ceremony
+    //     ],
+    //     tags: [
+    //         {
+    //             text: "Award Winner",
+    //             bgColor: "bg-yellow-100",
+    //             textColor: "text-yellow-800"
+    //         },
+    //         {
+    //             text: "Excellence",
+    //             bgColor: "bg-purple-100",
+    //             textColor: "text-purple-800"
+    //         }
+    //     ],
+    //     borderColor: "border-yellow-500",
+    //     dotColor: "bg-yellow-500",
+    //     timeColor: "text-yellow-600"
+    // },
+    // {
+    //     id: "fullstack-developer",
+    //     year: "2023",
+    //     title: "💼 Full-Stack Developer Journey",
+    //     description: "Successfully transitioned from robotics to full-stack development, mastering modern web technologies and working on enterprise-level cloud solutions and AI platforms.",
+    //     tags: [
+    //         {
+    //             text: "Career Milestone",
+    //             bgColor: "bg-green-100",
+    //             textColor: "text-green-800"
+    //         },
+    //         {
+    //             text: "Technology",
+    //             bgColor: "bg-purple-100",
+    //             textColor: "text-purple-800"
+    //         }
+    //     ],
+    //     borderColor: "border-green-500",
+    //     dotColor: "bg-green-500",
+    //     timeColor: "text-green-600"
+    // }
+];

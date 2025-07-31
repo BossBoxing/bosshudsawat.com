@@ -1,14 +1,20 @@
-import AI from "./component/AI";
 import Content from "./component/Content";
 import Profile from "./component/Profile";
-import Experience from "./component/Experience";
+import NavigationSidebar from "./component/navigation/NavigationSidebar";
 
 export default function Home() {
   return (
-    <main className="flex flex-col lg:flex-row min-h-screen relative">
+    <main className="flex flex-col lg:flex-row min-h-screen">
+      {/* Profile Section */}
       <Profile />
+      
+      {/* Content Section */}
       <Content />
-      <AI />
+      
+      {/* Navigation Sidebar - Only visible on lg+ screens */}
+      <div className="hidden lg:flex">
+        <NavigationSidebar />
+      </div>
     </main>
   )
 }
