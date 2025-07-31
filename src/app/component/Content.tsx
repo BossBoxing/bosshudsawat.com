@@ -29,7 +29,11 @@ export default function Content() {
 
     // About Me list items
     const aboutMeItems = [
-        "💁‍♂️View my resume: Coming soon..",
+        (
+            <>
+                💁‍♂️View my CV: <Link href="/HUDSAWAT-AKKATI-CV.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">Click here</Link>
+            </>
+        ),
         "🗺Nationality: Thai",
         "🏠Live in Khon Kaen, Thailand",
         "🏳️Languages: Thai - English",
@@ -49,7 +53,7 @@ export default function Content() {
             animate="visible"
         >
 
-            <div className="grid grid-cols-1 xl:grid-cols-2">
+            <div className="grid grid-cols-1 xl:grid-cols-1">
                 <div>
                     <motion.div
                         custom={0}
@@ -106,7 +110,7 @@ export default function Content() {
                                     </li>
                                     <Separator className="mt-4 mb-4" />
                                     <li>
-                                        <strong>Web Development (Full Stack Role)</strong>
+                                        <strong>Tools Experience (Full-Stack Role)</strong>
                                         <ul className="mt-1 list-[circle] pl-6 space-y-1 text-gray-700">
                                             <li>Node.js</li>
                                             <li>Express.js</li>
@@ -120,10 +124,15 @@ export default function Content() {
                                             <li>CI/CD (Github Action by YML)</li>
                                             <li>Docker</li>
                                             <li>Kubernetes</li>
-                                            <li>Cloud Computing (Alibaba Cloud, Huawei Cloud)</li>
+                                            <li>Cloud Computing (Alibaba Cloud, Huawei Cloud, AWS, GCP, Digital Ocean)</li>
                                             <li>Handle large traffic with Load Balancer</li>
                                             <li>Cloudflare DNS Management</li>
                                             <li>Telegram Bot/Discord Bot/LINE Bot (Logs and dialogs system) for processor handling</li>
+                                            <li>AI/ML (OpenAI, Cluade AI, etc.)</li>
+                                            <li>OAuth2.0 (Google, Facebook)</li>
+                                            <li>Microservices with gRPC, RabbitMQ</li>
+                                            <li>SMS/Email/Telegram/Line Notification</li>
+                                            <li>WebSocket (Socket.io)</li>
 
                                         </ul>
                                     </li>
@@ -141,7 +150,7 @@ export default function Content() {
                         </Card>
                     </motion.div>
                 </div>
-                <div className="pl-0 xl:pl-4">
+                <div className="pl-0">
                     <motion.div
                         custom={2}
                         variants={cardVariant}
