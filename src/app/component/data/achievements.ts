@@ -92,6 +92,54 @@ export const achievementsData: Achievement[] = [
         dotColor: "bg-blue-500",
         timeColor: "text-blue-600"
     },
+    {
+        id: "speaker-at-tdc-x-alibaba-cloud",
+        year: "2023",
+        title: "Speaker at TDC x Alibaba Cloud Grand Opening Conference",
+        description: "Presented at TDC x Alibaba Cloud in Bangkok, Thailand, sharing insights on cloud computing, IT solutions in \"Explore Cloud Services and 200+ Innovative Use Cases Across All Industries and Business Sectors\" topic.",
+        tags: [
+            {
+                text: "Cloud Computing",
+                bgColor: "bg-green-100",
+                textColor: "text-green-800"
+            }
+        ],
+        images: [
+            {
+                url: "/img/speaker-at-tdc-x-alibaba-cloud/0.jpg",
+                alt: "TDC x Alibaba Cloud Image 1",
+                caption: "TDC x Alibaba Cloud"
+            },
+            {
+                url: "/img/speaker-at-tdc-x-alibaba-cloud/1.jpg",
+                alt: "TDC x Alibaba Cloud Image 2",
+                caption: "TDC x Alibaba Cloud"
+            },
+            {
+                url: "/img/speaker-at-tdc-x-alibaba-cloud/2.jpg",
+                alt: "TDC x Alibaba Cloud Image 3",
+                caption: "TDC x Alibaba Cloud"
+            },
+            {
+                url: "/img/speaker-at-tdc-x-alibaba-cloud/3.jpg",
+                alt: "TDC x Alibaba Cloud Image 4",
+                caption: "TDC x Alibaba Cloud"
+            },
+            {
+                url: "/img/speaker-at-tdc-x-alibaba-cloud/4.jpg",
+                alt: "TDC x Alibaba Cloud Image 5",
+                caption: "TDC x Alibaba Cloud"
+            },
+            {
+                url: "/img/speaker-at-tdc-x-alibaba-cloud/5.jpg",
+                alt: "TDC x Alibaba Cloud Image 6",
+                caption: "TDC x Alibaba Cloud"
+            }
+        ],
+        borderColor: "border-green-500",
+        dotColor: "bg-green-500",
+        timeColor: "text-green-600"
+    }
     // {
     //     id: "performance-award",
     //     year: "2016",

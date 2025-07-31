@@ -65,6 +65,11 @@ export const navigationData: NavigationItem[] = [
                 title: "Representative of Thailand",
                 href: "#achievement-thailand-representative"
             },
+            {
+                id: "speaker-at-tdc-x-alibaba-cloud",
+                title: "Speaker at TDC x Alibaba Cloud",
+                href: "#achievement-speaker-at-tdc-x-alibaba-cloud"
+            }
             // {
             //     id: "performance-award",
             //     title: "Performance Award",
