@@ -35,7 +35,8 @@ export const skillsData = {
             "OAuth2.0 (Google, Facebook)",
             "Microservices with gRPC, RabbitMQ",
             "SMS/Email/Telegram/Line Notification",
-            "WebSocket (Socket.io)"
+            "WebSocket (Socket.io)",
+            "Vector Database (Qdrant)"
         ]
     }
 };
