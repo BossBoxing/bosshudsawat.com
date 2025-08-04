@@ -139,7 +139,55 @@ export const achievementsData: Achievement[] = [
         borderColor: "border-green-500",
         dotColor: "bg-green-500",
         timeColor: "text-green-600"
-    }
+    },
+    {
+        id: "alibaba-cloud-certificates",
+        year: "2023",
+        title: "Alibaba Cloud Certificates from Alibaba Cloud",
+        description: "Received Alibaba Cloud Certificate for completing the Alibaba Cloud Essentials course, demonstrating expertise in cloud computing and Alibaba Cloud services.",
+        tags: [
+            {
+                text: "Certificate",
+                bgColor: "bg-orange-100",
+                textColor: "text-orange-800"
+            },
+            {
+                text: "Cloud Computing",
+                bgColor: "bg-green-100",
+                textColor: "text-green-800"
+            }
+        ],
+        images: [
+            {
+                url: "/img/alibaba-cloud-certificates/alibaba-cert-1.png",
+                alt: "Alibaba Cloud Certified Handle Large Traffic with Load Balancer",
+                caption: "Alibaba Cloud Certified Handle Large Traffic with Load Balancer"
+            },
+            {
+                url: "/img/alibaba-cloud-certificates/alibaba-cert-2.jpg",
+                alt: "Alibaba Cloud Certified Operate and Manage Object Storage on the Cloud",
+                caption: "Alibaba Cloud Certified Operate and Manage Object Storage on the Cloud"
+            },
+            {
+                url: "/img/alibaba-cloud-certificates/alibaba-cert-3.png",
+                alt: "Alibaba Cloud Certified Operate and Manage a Cloud Server",
+                caption: "Alibaba Cloud Certified Operate and Manage a Cloud Server"
+            },
+            {
+                url: "/img/alibaba-cloud-certificates/alibaba-cert-4.jpg",
+                alt: "Alibaba Cloud Certified Operate and Manage a Relational Database on the Cloud",
+                caption: "Alibaba Cloud Certified Operate and Manage a Relational Database on the Cloud"
+            },
+            {
+                url: "/img/alibaba-cloud-certificates/alibaba-cert-5.png",
+                alt: "Alibaba Cloud Certified Use Cloud Resources Flexibly According to Business Requirement",
+                caption: "Alibaba Cloud Certified Use Cloud Resources Flexibly According to Business Requirement"
+            }
+        ],
+        borderColor: "border-blue-500",
+        dotColor: "bg-blue-500",
+        timeColor: "text-blue-600"
+    },
     // {
     //     id: "performance-award",
     //     year: "2016",

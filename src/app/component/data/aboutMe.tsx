@@ -36,7 +36,15 @@ export const aboutMeItems: AboutMeItem[] = [
         )
     },
     {
+        id: "medium",
+        content: (
+            <>
+                📝Medium: <Link href="https://medium.com/@hudsawat.ak" target="_blank" rel="noopener noreferrer" className="text-blue-500">Click here</Link>
+            </>
+        )
+    },
+    {
         id: "hobbies",
-        content: "💭Hobbies: 🎮Video Game, 🏸Badminton, 🥁Drums, 🎸Guitar, 🎸Bass, 🎤Singing"
+        content: "💭Hobbies: 🎮Video Game, 🏸Badminton, 🥁Drums, 🎸Guitar, 🎸Bass, 🎤Singing, 📝Writing on Medium (Planning to write on Medium)"
     }
 ];

@@ -69,6 +69,11 @@ export const navigationData: NavigationItem[] = [
                 id: "speaker-at-tdc-x-alibaba-cloud",
                 title: "Speaker at TDC x Alibaba Cloud",
                 href: "#achievement-speaker-at-tdc-x-alibaba-cloud"
+            },
+            {
+                id: "alibaba-cloud-certificates",
+                title: "Alibaba Cloud Certificates",
+                href: "#achievement-alibaba-cloud-certificates"
             }
             // {
             //     id: "performance-award",
