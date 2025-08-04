@@ -20,10 +20,11 @@ export const metadata: Metadata = {
     description: "Portfolio of Boss Hudsawat, a passionate software engineer, tech speaker, and robotics enthusiast. Explore my work experience, achievements, and technical expertise.",
     images: [
       {
-        url: "/opengraph-image", // Using the generated Open Graph image
+        url: "https://bosshudsawat.com/opengraph-image", // Using absolute URL for better compatibility
         width: 1200,
         height: 630,
         alt: "Boss Hudsawat - Full Stack Developer & Tech Speaker",
+        type: "image/png",
       },
     ],
   },
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Boss Hudsawat - Full Stack Developer & Tech Speaker",
     description: "Portfolio of Boss Hudsawat, a passionate software engineer, tech speaker, and robotics enthusiast.",
-    images: ["/twitter-image"], // Using the generated Twitter image
+    images: ["https://bosshudsawat.com/twitter-image"], // Using absolute URL
     creator: "@bosshudsawat", // Add your Twitter handle if you have one
   },
   icons: {
@@ -53,6 +54,15 @@ export const metadata: Metadata = {
     "application-name": "Boss Hudsawat Portfolio",
     "msapplication-TileColor": "#667eea",
     "msapplication-config": "/browserconfig.xml",
+    // Facebook specific meta tags
+    "fb:app_id": "", // Add your Facebook App ID if you have one
+    "og:image:width": "1200",
+    "og:image:height": "630",
+    "og:image:type": "image/png",
+    "og:image:alt": "Boss Hudsawat - Full Stack Developer & Tech Speaker",
+    // Additional meta tags for better compatibility
+    "viewport": "width=device-width, initial-scale=1",
+    "format-detection": "telephone=no",
   },
 }
 
