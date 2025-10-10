@@ -14,8 +14,19 @@ export interface ExperienceItem {
 
 export const workExperienceData: ExperienceItem[] = [
     {
+        id: "woxa",
+        period: "October 2025 - Present",
+        company: "Woxa Corporation",
+        position: "Mid-level Back End Developer",
+        companyUrl: "https://woxacorp.com/",
+        logo: "https://woxacorp.com/wp-content/uploads/2022/12/Logo-Woxa-Corp-Transparent-blue-website.png",
+        logoAlt: "Woxa Corporation Logo",
+        description: "Woxa Corporation is a software and technology company specializing in building high-performance trading platforms since 2018. They provide fully customizable trading platform solutions for brokers, including web trading terminals, mobile applications for iOS and Android, and live currency widgets, with a focus on scalability, reliability, and white-label solutions.",
+        logoClassName: "justify-left mb-4 m-2"
+    },
+    {
         id: "tdc",
-        period: "August 2023 - Present",
+        period: "August 2023 - September 2025",
         company: "THAI DATA CLOUD",
         position: "Full Stack Developer",
         companyUrl: "https://thaidata.cloud/",
@@ -26,7 +37,7 @@ export const workExperienceData: ExperienceItem[] = [
     },
     {
         id: "behinder",
-        period: "August 2023 - Present",
+        period: "August 2023 - September 2025",
         company: "Behinder AI",
         position: "Full Stack Developer (Parallel Side Project)",
         companyUrl: "https://behinder.ai/",
@@ -51,9 +62,9 @@ export const workExperienceData: ExperienceItem[] = [
         period: "May 2022 - August 2022",
         company: "Khon kaen Softtech co.,ltd.",
         position: "Web Programmer Trainee",
-        logo: "",
-        logoAlt: "",
-        description: "",
-        logoClassName: ""
+        logo: "https://www.jobbkk.com/upload/employer/08/DC8/028DC8/images/167368.webp",
+        logoAlt: "Khon kaen Softtech co.,ltd. Logo",
+        description: "Khon kaen Softtech co.,ltd. is a software development company that specializes in building web applications and mobile apps. They offer a wide range of services, including web development, mobile app development, and software development, to help businesses achieve their goals.",
+        logoClassName: "justify-left mb-4 m-2"
     }
 ];

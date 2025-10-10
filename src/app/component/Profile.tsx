@@ -59,7 +59,7 @@ function ProfileCarousel() {
     return (
         <>
         <motion.div
-            className="w-full max-w-xs mx-auto mb-4 mt-6"
+            className="w-full lg:max-w-sm max-w-3xl mx-auto mb-4 mt-6"
             initial={{ opacity: 0, y: 32 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -67,7 +67,7 @@ function ProfileCarousel() {
             <Carousel>
                 <CarouselContent>
                     <CarouselItem className="flex flex-col items-center justify-center">
-                        <div className="relative w-72 h-44 mb-2 flex items-center justify-center">
+                        <div className="relative lg:w-80 lg:h-52 w-full h-72 sm:h-96 mb-2 flex items-center justify-center">
                             <AnimatePresence mode="wait" initial={false}>
                                 <motion.img
                                     key={profileSlides[current].img}
@@ -89,7 +89,7 @@ function ProfileCarousel() {
                                 animate={{ opacity: 1, y: 0 }}
                                 exit={{ opacity: 0, y: -10 }}
                                 transition={{ duration: 0.35 }}
-                                className="text-xs text-center text-gray-600 min-h-[1.5em]"
+                                className="text-sm md:text-xs text-center text-gray-600 min-h-[1.5em]"
                             >
                                 {profileSlides[current].caption}
                             </motion.div>
@@ -100,7 +100,7 @@ function ProfileCarousel() {
                     {profileSlides.map((_, idx) => (
                         <button
                             key={idx}
-                            className={`w-2 h-2 rounded-full ${current === idx ? 'bg-blue-500' : 'bg-gray-300'}`}
+                            className={`w-2.5 h-2.5 md:w-2 md:h-2 rounded-full ${current === idx ? 'bg-blue-500' : 'bg-gray-300'}`}
                             style={{ outline: 'none', border: 'none' }}
                             onClick={() => setCurrent(idx)}
                             aria-label={`Go to slide ${idx + 1}`}
@@ -177,24 +177,52 @@ export default function Profile() {
             animate="show"
         >
             <div className="sticky top-6">
-                <motion.div variants={item}>
-                    <Image
-                        src="/img/bosshudsawat-on-stage.jpg"
-                        alt="Boss Hudsawat Akkati"
-                        width={200}
-                        height={200}
-                        className="rounded-lg shadow-md object-cover mx-auto mb-4"
-                    />
-                </motion.div>
-                {/* <span> {t('about-me')}</span> */}
-                <motion.h2 className="text-xl font-bold text-center" variants={item}>Hello! I'm</motion.h2>
-                <motion.h1 className="text-2xl font-bold text-center mb-2" variants={item}>(Boss) Hudsawat Akkati</motion.h1>
-                <motion.p className="text-center mb-2" variants={item}>
-                    Full Stack Developer at <Link href="https://thaidata.cloud/" target="_blank" rel="noopener noreferrer" className="text-blue-500">THAI DATA CLOUD </Link>
-                </motion.p>
-                <motion.p className="text-center text-sm" variants={item}>
-                    Graduated from <Link href="https://kku.ac.th/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Khon Kaen University </Link>
-                </motion.p>
+                {/* Layout สำหรับหน้าจอ < 1024px: รูปซ้าย ข้อความขวา */}
+                <div className="lg:hidden flex flex-row gap-4 items-center justify-center place-items-center bg-white rounded-2xl mb-6 mt-6 shadow-xl">
+                    {/* รูปภาพ */}
+                    <motion.div variants={item} className="flex">
+                        <Image
+                            src="/img/bosshudsawat-profile.png"
+                            alt="Boss Hudsawat Akkati"
+                            width={140}
+                            height={140}
+                            className="md:w-[160px] md:h-[200px] sm:w-[180px] sm:h-[220px] rounded-s-lg rounded-e-none rounded-none shadow-md object-cover"
+                        />
+                    </motion.div>
+                    
+                    {/* ข้อความ */}
+                    <div className="flex-1 text-left pr-1 md:pr-2">
+                        <motion.h2 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold" variants={item}>Hello! I'm</motion.h2>
+                        <motion.h1 className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2" variants={item}>(Boss) Hudsawat Akkati</motion.h1>
+                        <motion.p className="mb-1 sm:mb-2 md:mb-2 text-[8px] sm:text-xs md:text-lg lg:text-lg" variants={item}>
+                            Back End Developer at <Link href="https://woxacorp.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Woxa Corporation </Link>
+                        </motion.p>
+                        <motion.p className="text-[8px] sm:text-xs md:text-md lg:text-lg" variants={item}>
+                            Graduated from <Link href="https://kku.ac.th/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Khon Kaen University </Link>
+                        </motion.p>
+                    </div>
+                </div>
+
+                {/* Layout สำหรับหน้าจอ >= 1024px: แสดงแบบเดิม */}
+                <div className="hidden lg:block">
+                    <motion.div variants={item}>
+                        <Image
+                            src="/img/bosshudsawat-profile.png"
+                            alt="Boss Hudsawat Akkati"
+                            width={310}
+                            height={310}
+                            className="rounded-lg shadow-md object-cover mx-auto mb-4"
+                        />
+                    </motion.div>
+                    <motion.h2 className="text-xl font-bold text-center" variants={item}>Hello! I'm</motion.h2>
+                    <motion.h1 className="text-2xl font-bold text-center mb-2" variants={item}>(Boss) Hudsawat Akkati</motion.h1>
+                    <motion.p className="text-center mb-2" variants={item}>
+                        Back End Developer at <Link href="https://woxacorp.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Woxa Corporation </Link>
+                    </motion.p>
+                    <motion.p className="text-center text-sm" variants={item}>
+                        Graduated from <Link href="https://kku.ac.th/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Khon Kaen University </Link>
+                    </motion.p>
+                </div>
 
                 <motion.div className="mt-6 -mb-6 place-self-center" variants={item}>
                     <a href="https://git.io/typing-svg">
