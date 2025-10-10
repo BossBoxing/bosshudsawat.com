@@ -34,6 +34,11 @@ export const navigationData: NavigationItem[] = [
         href: "#work-experience",
         subItems: [
             {
+                id: "woxa",
+                title: "Woxa Corporation",
+                href: "#experience-woxa"
+            },
+            {
                 id: "tdc",
                 title: "THAI DATA CLOUD",
                 href: "#experience-tdc"

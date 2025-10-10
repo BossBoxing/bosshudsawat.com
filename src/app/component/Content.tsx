@@ -19,29 +19,29 @@ export default function Content() {
             >
                 <div className="grid grid-cols-1 xl:grid-cols-1">
                     <div>
-                        <AboutMe 
-                            custom={0} 
-                            cardVariant={cardVariant} 
-                            listItemVariant={listItemVariant} 
+                        <AboutMe
+                            custom={0}
+                            cardVariant={cardVariant}
+                            listItemVariant={listItemVariant}
                         />
-                        
-                        <Skills 
-                            custom={1} 
-                            cardVariant={cardVariant} 
-                        />
-                    </div>
-                    
-                    <div className="pl-0">
-                        <WorkExperience 
-                            custom={2} 
-                            cardVariant={cardVariant} 
+
+                        <Skills
+                            custom={1}
+                            cardVariant={cardVariant}
                         />
                     </div>
-                    
+
                     <div className="pl-0">
-                        <Achievements 
-                            custom={3} 
-                            cardVariant={cardVariant} 
+                        <WorkExperience
+                            custom={2}
+                            cardVariant={cardVariant}
+                        />
+                    </div>
+
+                    <div className="pl-0">
+                        <Achievements
+                            custom={3}
+                            cardVariant={cardVariant}
                         />
                     </div>
                 </div>

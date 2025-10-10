@@ -4,7 +4,7 @@ import type React from "react" // Import React
 import Script from "next/script"
 
 export const metadata: Metadata = {
-  title: "Boss Hudsawat - Full Stack Developer",
+  title: "Boss Hudsawat - Portfolio",
   description: "Portfolio of Boss Hudsawat, a passionate software engineer, tech speaker, and robotics enthusiast. Explore my work experience, achievements, and technical expertise.",
   keywords: ["Boss Hudsawat", "Full Stack Developer", "Tech Speaker", "Robotics", "Portfolio", "Developer", "Web Development", "Public Speaking"],
   authors: [{ name: "Boss Hudsawat" }],
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     creator: "@bosshudsawat", // Add your Twitter handle if you have one
   },
   icons: {
-    icon: "/fav/favicon.ico", // Default favicon
+    icon: "/fav/logo.png", // Default favicon
     // shortcut: "/fav/android-chrome-192x192.png", // Shortcut icon
   },
   alternates: {

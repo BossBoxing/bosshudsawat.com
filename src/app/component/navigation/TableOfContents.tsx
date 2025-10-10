@@ -12,9 +12,12 @@ export default function TableOfContents({ className = "" }: TableOfContentsProps
         const targetId = href.replace('#', '');
         const element = document.getElementById(targetId);
         if (element) {
-            element.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - 30; // 50px offset
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
         }
     };

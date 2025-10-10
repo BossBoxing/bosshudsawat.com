@@ -67,7 +67,7 @@ function ProfileCarousel() {
             <Carousel>
                 <CarouselContent>
                     <CarouselItem className="flex flex-col items-center justify-center">
-                        <div className="relative lg:w-80 lg:h-52 w-full h-72 sm:h-96 mb-2 flex items-center justify-center">
+                        <div className="relative lg:w-100 lg:h-52 w-full h-72 sm:h-96 mb-2 flex items-center justify-center">
                             <AnimatePresence mode="wait" initial={false}>
                                 <motion.img
                                     key={profileSlides[current].img}
@@ -170,7 +170,7 @@ export default function Profile() {
 
     return (
         <motion.div
-            className="lg:w-1/4 p-6"
+            className="lg:w-1/3 p-6"
             role="complementary"
             variants={container}
             initial="hidden"
@@ -186,7 +186,7 @@ export default function Profile() {
                             alt="Boss Hudsawat Akkati"
                             width={140}
                             height={140}
-                            className="md:w-[160px] md:h-[200px] sm:w-[180px] sm:h-[220px] rounded-s-lg rounded-e-none rounded-none shadow-md object-cover"
+                            className="md:w-[160px] md:h-[200px] sm:w-[180px] sm:h-[220px] lg:w-[50px] lg:h-[50px] rounded-s-lg rounded-e-none rounded-none shadow-md object-cover"
                         />
                     </motion.div>
                     
@@ -194,10 +194,10 @@ export default function Profile() {
                     <div className="flex-1 text-left pr-1 md:pr-2">
                         <motion.h2 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold" variants={item}>Hello! I'm</motion.h2>
                         <motion.h1 className="text-sm sm:text-xl md:text-2xl lg:text-3xl font-bold mb-1 md:mb-2" variants={item}>(Boss) Hudsawat Akkati</motion.h1>
-                        <motion.p className="mb-1 sm:mb-2 md:mb-2 text-[8px] sm:text-xs md:text-lg lg:text-lg" variants={item}>
+                        <motion.p className="mb-1 sm:mb-2 md:mb-2 text-[8px] sm:text-sm md:text-lg lg:text-lg" variants={item}>
                             Back End Developer at <Link href="https://woxacorp.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Woxa Corporation </Link>
                         </motion.p>
-                        <motion.p className="text-[8px] sm:text-xs md:text-md lg:text-lg" variants={item}>
+                        <motion.p className="text-[8px] sm:text-sm md:text-md lg:text-lg" variants={item}>
                             Graduated from <Link href="https://kku.ac.th/" target="_blank" rel="noopener noreferrer" className="text-blue-500">Khon Kaen University </Link>
                         </motion.p>
                     </div>
@@ -209,8 +209,8 @@ export default function Profile() {
                         <Image
                             src="/img/bosshudsawat-profile.png"
                             alt="Boss Hudsawat Akkati"
-                            width={310}
-                            height={310}
+                            width={150}
+                            height={120}
                             className="rounded-lg shadow-md object-cover mx-auto mb-4"
                         />
                     </motion.div>
@@ -224,19 +224,19 @@ export default function Profile() {
                     </motion.p>
                 </div>
 
-                <motion.div className="mt-6 -mb-6 place-self-center" variants={item}>
+                <motion.div className="place-self-center" variants={item}>
                     <a href="https://git.io/typing-svg">
                         <img src="https://readme-typing-svg.demolab.com?font=Roboto+Slab&weight=600&size=24&duration=4000&pause=1000&color=4E99F7&center=true&width=435&lines=Hello+Everyone.;I'm+Hudsawat.;He%2FHim;Computer+Science." alt="Typing SVG" />
                     </a>
                 </motion.div>
                 <motion.div variants={item}>
-                    <Card className="mb-6 mt-6 shadow-md">
+                    <Card className="shadow-md">
                         <CardHeader>
-                            <p className="text-gray-500">I am passionate about Full Stack Development, DevOps, AI , Robotics, Game Development, Scripting (RedM, FiveM) and all other things about computer.</p>
+                            <p className="text-gray-500 text-base lg:text-sm">I am passionate about Full Stack Development, DevOps, AI , Robotics, Game Development, Scripting (RedM, FiveM) and all other things about computer.</p>
                         </CardHeader>
                     </Card>
 
-                    <div className="mt-7 justify-self-center">
+                    <div className="mt-2 justify-self-center">
                         <a href="https://github.com/bossboxing" target="_blank" rel="noreferrer">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-slate-500 hover:fill-blue-700 inline-block m-2">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z">
