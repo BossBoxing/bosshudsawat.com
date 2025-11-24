@@ -3,6 +3,7 @@ export interface Achievement {
     year: string;
     title: string;
     description: string;
+    source?: string;
     images?: Array<{
         url: string;
         alt: string;
@@ -16,74 +17,32 @@ export interface Achievement {
     borderColor: string;
     dotColor: string;
     timeColor: string;
+    badge?: string;
 }
 
 export const achievementsData: Achievement[] = [
     {
-        id: "thailand-representative",
-        year: "2016",
-        title: "Representative of Thailand",
-        description: "Selected as a national representative to compete in World Robot Games Firefighting Robot Competition in Bandung, Indonesia, in collaboration with the Office of the Basic Education Commission (OBEC), Thailand. Received Performance Award for outstanding technical performance and innovative robotics solutions.",
+        id: "clickup-verified-power-user-badge",
+        year: "2025",
+        title: "ClickUp Verified Power User Badge",
+        description: "Received the ClickUp Verified Power User Badge, recognizing me as a top 10% ClickUp user globally based on platform usage. This badge signifies expertise in leveraging ClickUp for productivity.",
+        badge: "/img/badge/verified-power-user-badge-large.svg",
+        source: "https://clickup.com/verified-power-user",
         images: [
             {
-                url: "/img/robotics-competition/bandung/bandung-1.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 1",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
+                url: "/img/badge/verified-1.png",
+                alt: "ClickUp Verified Power User Badge",
+                caption: "They sent me this caption"
             },
             {
-                url: "/img/robotics-competition/bandung/bandung-2.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 2",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
+                url: "/img/badge/verified-2.png",
+                alt: "ClickUp Verified Power User Badge",
+                caption: "The ClickUp Verified Power User Badge"
             },
-            {
-                url: "/img/robotics-competition/bandung/bandung-3.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 3",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-4.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 4",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-5.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 5",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-6.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 6",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-7.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 7",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-8.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 8",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-9.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 9",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            },
-            {
-                url: "/img/robotics-competition/bandung/bandung-10.jpg",
-                alt: "World Robot Games 2016 @Bandung, Indonesia Image 10",
-                caption: "World Robot Games 2016 @Bandung, Indonesia"
-            }
         ],
         tags: [
             {
-                text: "Robotics Competition",
-                bgColor: "bg-green-100",
-                textColor: "text-green-800"
-            },
-            {
-                text: "International Competition",
+                text: "ClickUp Verified Power User Badge",
                 bgColor: "bg-blue-100",
                 textColor: "text-blue-800"
             }
@@ -182,6 +141,79 @@ export const achievementsData: Achievement[] = [
                 url: "/img/alibaba-cloud-certificates/alibaba-cert-5.png",
                 alt: "Alibaba Cloud Certified Use Cloud Resources Flexibly According to Business Requirement",
                 caption: "Alibaba Cloud Certified Use Cloud Resources Flexibly According to Business Requirement"
+            }
+        ],
+        borderColor: "border-blue-500",
+        dotColor: "bg-blue-500",
+        timeColor: "text-blue-600"
+    },
+    {
+        id: "thailand-representative",
+        year: "2016",
+        title: "Representative of Thailand",
+        description: "Selected as a national representative to compete in World Robot Games Firefighting Robot Competition in Bandung, Indonesia, in collaboration with the Office of the Basic Education Commission (OBEC), Thailand. Received Performance Award for outstanding technical performance and innovative robotics solutions.",
+        images: [
+            {
+                url: "/img/robotics-competition/bandung/bandung-1.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 1",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-2.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 2",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-3.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 3",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-4.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 4",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-5.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 5",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-6.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 6",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-7.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 7",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-8.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 8",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-9.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 9",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            },
+            {
+                url: "/img/robotics-competition/bandung/bandung-10.jpg",
+                alt: "World Robot Games 2016 @Bandung, Indonesia Image 10",
+                caption: "World Robot Games 2016 @Bandung, Indonesia"
+            }
+        ],
+        tags: [
+            {
+                text: "Robotics Competition",
+                bgColor: "bg-green-100",
+                textColor: "text-green-800"
+            },
+            {
+                text: "International Competition",
+                bgColor: "bg-blue-100",
+                textColor: "text-blue-800"
             }
         ],
         borderColor: "border-blue-500",

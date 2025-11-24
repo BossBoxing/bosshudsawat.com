@@ -66,9 +66,9 @@ export const navigationData: NavigationItem[] = [
         href: "#achievements",
         subItems: [
             {
-                id: "thailand-representative",
-                title: "Representative of Thailand",
-                href: "#achievement-thailand-representative"
+                id: "clickup-verified-power-user-badge",
+                title: "ClickUp Verified Power User Badge",
+                href: "#achievement-clickup-verified-power-user-badge"
             },
             {
                 id: "speaker-at-tdc-x-alibaba-cloud",
@@ -79,7 +79,12 @@ export const navigationData: NavigationItem[] = [
                 id: "alibaba-cloud-certificates",
                 title: "Alibaba Cloud Certificates",
                 href: "#achievement-alibaba-cloud-certificates"
-            }
+            },
+            {
+                id: "thailand-representative",
+                title: "Representative of Thailand",
+                href: "#achievement-thailand-representative"
+            },
             // {
             //     id: "performance-award",
             //     title: "Performance Award",

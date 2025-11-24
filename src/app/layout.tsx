@@ -109,10 +109,25 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-slate-100 text-black min-h-screen flex flex-col">
-        {children}
-        <footer className="mt-auto py-4 text-center text-sm">
-          This portfolio is coded by Boss Hudsawat, using Next.js and TailwindCSS
+      <body className="bg-slate-900 text-black min-h-screen flex flex-col">
+        <header className="bg-slate-900 py-4">
+          <nav className="container mx-auto px-4 flex justify-between items-center">
+            <a href="/" className="text-2xl font-bold text-white">Boss Hudsawat</a>
+            {/* Add navigation links here if needed */}
+          </nav>
+        </header>
+
+        <main className="flex-1 bg-slate-100">
+          {children}
+        </main>
+        <footer className="bg-slate-900 py-2">
+          <div className="container mx-auto px-4 flex justify-between items-center">
+            <a className="font-bold text-white">© {new Date().getFullYear()} Boss Hudsawat. All rights reserved.</a>
+            <div className="flex gap-2">
+              <a href="https://github.com/bossboxing" className="font-bold text-white">GitHub</a>
+              <a href="https://www.linkedin.com/in/hudsawat-akkati/" className="font-bold text-white">LinkedIn</a>
+            </div>
+          </div>
         </footer>
       </body>
     </html>

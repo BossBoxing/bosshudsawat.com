@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { achievementsData } from "../data/achievements";
 import ImageSlider from "./ImageSlider";
+import LinkPreview from "./LinkPreview";
 
 interface AchievementsProps {
     custom: number;
@@ -32,13 +33,22 @@ export default function Achievements({ custom, cardVariant }: AchievementsProps)
                                         {achievement.year}
                                     </time>
                                 </div>
+                                {achievement.badge && (
+                                    <div className="mb-2">
+                                        <img
+                                            src={achievement.badge}
+                                            alt={`${achievement.title} Badge`}
+                                            className="h-14 w-auto"
+                                        />
+                                    </div>
+                                )}
                                 <h4 className="font-semibold text-lg text-gray-900 mb-2">
                                     {achievement.title}
                                 </h4>
                                 <div className="space-x-2 my-2">
                                     {achievement.tags.map((tag, index) => (
-                                        <span 
-                                            key={index} 
+                                        <span
+                                            key={index}
                                             className={`inline-block px-3 py-1 ${tag.bgColor} ${tag.textColor} text-xs font-medium rounded-full`}
                                         >
                                             {tag.text}
@@ -48,12 +58,17 @@ export default function Achievements({ custom, cardVariant }: AchievementsProps)
                                 <p className="text-gray-700 text-sm leading-relaxed">
                                     {achievement.description}
                                 </p>
-                                
+                                {achievement.source && (
+                                    <div className="mt-4 mb-2">
+                                        <LinkPreview url={achievement.source} />
+                                    </div>
+                                )}
+
 
                                 {/* Image Slider */}
                                 {achievement.images && achievement.images.length > 0 && (
                                     <div className="mt-4">
-                                        <ImageSlider 
+                                        <ImageSlider
                                             images={achievement.images}
                                             className="max-w-md mx-auto"
                                         />
