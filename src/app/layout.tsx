@@ -109,23 +109,23 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-slate-900 text-black min-h-screen flex flex-col">
-        <header className="bg-slate-900 py-4">
+      <body className="bg-white text-black min-h-screen flex flex-col">
+        <header className="bg-[#041632] py-4">
           <nav className="container mx-auto px-4 flex justify-between items-center">
-            <a href="/" className="text-2xl font-bold text-white">Boss Hudsawat</a>
+            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-[#2596be] to-[#0f63d5] bg-clip-text text-transparent">Boss Hudsawat</a>
             {/* Add navigation links here if needed */}
           </nav>
         </header>
 
-        <main className="flex-1 bg-slate-100">
+        <main className="flex-1 bg-white">
           {children}
         </main>
-        <footer className="bg-slate-900 py-2">
+        <footer className="bg-white py-6">
           <div className="container mx-auto px-4 flex justify-between items-center">
-            <a className="font-bold text-white">© {new Date().getFullYear()} Boss Hudsawat. All rights reserved.</a>
+            <a className="font-bold text-gray-700">© {new Date().getFullYear()} Boss Hudsawat. All rights reserved.</a>
             <div className="flex gap-2">
-              <a href="https://github.com/bossboxing" className="font-bold text-white">GitHub</a>
-              <a href="https://www.linkedin.com/in/hudsawat-akkati/" className="font-bold text-white">LinkedIn</a>
+              <a href="https://github.com/bossboxing" className="font-bold text-gray-700">GitHub</a>
+              <a href="https://www.linkedin.com/in/hudsawat-akkati/" className="font-bold text-gray-700">LinkedIn</a>
             </div>
           </div>
         </footer>
