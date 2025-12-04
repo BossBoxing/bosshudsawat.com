@@ -110,13 +110,6 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-white text-black min-h-screen flex flex-col">
-        <header className="bg-[#041632] py-4">
-          <nav className="container mx-auto px-4 flex justify-between items-center">
-            <a href="/" className="text-2xl font-bold bg-gradient-to-r from-[#2596be] to-[#0f63d5] bg-clip-text text-transparent">Boss Hudsawat</a>
-            {/* Add navigation links here if needed */}
-          </nav>
-        </header>
-
         <main className="flex-1 bg-white">
           {children}
         </main>
