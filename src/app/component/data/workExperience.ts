@@ -16,12 +16,23 @@ export const workExperienceData: ExperienceItem[] = [
     {
         id: "woxa",
         period: "October 2025 - Present",
-        company: "Woxa Corporation",
+        company: "WOXA Group Holding",
         position: "Mid-level Back End Developer",
-        companyUrl: "https://woxacorp.com/",
-        logo: "https://woxacorp.com/wp-content/uploads/2022/12/Logo-Woxa-Corp-Transparent-blue-website.png",
-        logoAlt: "Woxa Corporation Logo",
-        description: "Woxa Corporation is a software and technology company specializing in building high-performance trading platforms since 2018. They provide fully customizable trading platform solutions for brokers, including web trading terminals, mobile applications for iOS and Android, and live currency widgets, with a focus on scalability, reliability, and white-label solutions.",
+        companyUrl: "https://woxagroup.com/",
+        logo: "/img/woxa-group-logo.png",
+        logoAlt: "Woxa Group Holding Logo",
+        description: "WOXA Group is an investment holding company that owns and operates businesses in financial services and technology. We build long-term value through strategic ownership.",
+        logoClassName: "justify-left mb-4 m-2"
+    },
+    {
+        id: "saifa-ai",
+        period: "October 2025 - Present",
+        company: "Saifa AI",
+        position: "Back End Developer (Parallel Side Project)",
+        companyUrl: "https://saifa.ai/",
+        logo: "/img/saifa-logo.png",
+        logoAlt: "Saifa AI",
+        description: "Saifa AI is a customizable AI assistant for businesses that learns your company’s data to provide accurate insights, automate tasks, and boost team productivity.",
         logoClassName: "justify-left mb-4 m-2"
     },
     {
