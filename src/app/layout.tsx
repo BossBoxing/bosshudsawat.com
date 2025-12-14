@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   creator: "Boss Hudsawat",
   publisher: "Boss Hudsawat",
   robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  metadataBase: new URL("https://bosshudsawat.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
