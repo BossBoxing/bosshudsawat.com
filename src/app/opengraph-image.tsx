@@ -69,7 +69,7 @@ export default async function Image() {
           >
             {/* @ts-ignore */}
             <img
-              src={profileImageSrc}
+              src={profileImageSrc as any}
               width="100"
               height="100"
               style={{
