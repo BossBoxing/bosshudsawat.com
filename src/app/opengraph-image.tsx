@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
-
-export const runtime = 'edge'
+import { join } from 'node:path'
+import { readFileSync } from 'node:fs'
 
 export const alt = 'Boss Hudsawat - Full Stack Developer & Tech Speaker'
 export const contentType = 'image/png'
@@ -10,10 +10,9 @@ export const size = {
 }
 
 export default async function Image() {
-  // Fetch the profile image
-  const profileImageSrc = await fetch('https://bosshudsawat.com/img/boss-3.jpg').then(
-    (res) => res.arrayBuffer()
-  )
+  // Read the profile image from the filesystem
+  const profileImageDetails = join(process.cwd(), 'public/img/boss-3.jpg')
+  const profileImageSrc = readFileSync(profileImageDetails).buffer
 
   return new ImageResponse(
     (

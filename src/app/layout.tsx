@@ -19,11 +19,20 @@ export const metadata: Metadata = {
     siteName: "Boss Hudsawat Portfolio",
     title: "Boss Hudsawat - Full Stack Developer & Tech Speaker",
     description: "Portfolio of Boss Hudsawat, a passionate software engineer, tech speaker, and robotics enthusiast. Explore my work experience, achievements, and technical expertise.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Boss Hudsawat - Full Stack Developer & Tech Speaker",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Boss Hudsawat - Full Stack Developer & Tech Speaker",
     description: "Portfolio of Boss Hudsawat, a passionate software engineer, tech speaker, and robotics enthusiast.",
+    images: ["/twitter-image"],
     creator: "@bosshudsawat", // Add your Twitter handle if you have one
   },
   icons: {
