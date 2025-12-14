@@ -10,6 +10,11 @@ export const size = {
 }
 
 export default async function Image() {
+  // Fetch the profile image
+  const profileImageSrc = await fetch('https://bosshudsawat.com/img/boss-3.jpg').then(
+    (res) => res.arrayBuffer()
+  )
+
   return new ImageResponse(
     (
       <div
@@ -63,24 +68,18 @@ export default async function Image() {
               marginBottom: '30px',
             }}
           >
-            <div
+            {/* @ts-ignore */}
+            <img
+              src={profileImageSrc}
+              width="100"
+              height="100"
               style={{
-                width: '100px',
-                height: '100px',
                 borderRadius: '50%',
-                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '48px',
-                fontWeight: 'bold',
-                color: 'white',
                 marginRight: '30px',
-                border: '4px solid #000',
+                border: '4px solid #fff',
+                objectFit: 'cover',
               }}
-            >
-              BH
-            </div>
+            />
             <div style={{ display: 'flex', flexDirection: 'column' }}>
               <div
                 style={{
